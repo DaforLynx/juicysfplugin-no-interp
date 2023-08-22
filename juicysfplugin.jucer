@@ -5,7 +5,7 @@
               pluginWantsMidiIn="1" pluginEditorRequiresKeys="1" companyName="Birchlabs"
               companyWebsite="https://birchlabs.co.uk" bundleIdentifier="uk.co.birchlabs.juicysfplugin"
               pluginManufacturer="birchlabs" pluginCode="Jspf" pluginManufacturerCode="Blbs"
-              pluginName="Juicy SF" pluginDesc="Audio plugin to play soundfonts"
+              pluginName="Juicy SF (no interp)" pluginDesc="Audio plugin to play soundfonts"
               id="ptvVfg" pluginFormats="buildAU,buildStandalone,buildVST,buildVST3"
               pluginCharacteristicsValue="pluginIsSynth,pluginWantsMidiIn,pluginEditorRequiresKeys"
               buildVST="1" buildAU="1" buildRTAS="0" buildAAX="0" enableIAA="0"

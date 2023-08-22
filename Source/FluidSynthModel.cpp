@@ -82,6 +82,7 @@ void FluidSynthModel::initialise() {
 
     synth = { new_fluid_synth(settings.get()), delete_fluid_synth };
     fluid_synth_set_sample_rate(synth.get(), currentSampleRate);
+    fluid_synth_set_interp_method(synth.get(), -1, FLUID_INTERP_NONE);
 
     // I can't hear a damned thing
     fluid_synth_set_gain(synth.get(), 2.0);
