@@ -1,3 +1,5 @@
+#pragma code_page(65001)
+
 #ifdef JUCE_USER_DEFINED_RC_FILE
  #include JUCE_USER_DEFINED_RC_FILE
 #else
@@ -14,9 +16,9 @@ BEGIN
     BLOCK "040904E4"
     BEGIN
       VALUE "CompanyName",  "Birchlabs\0"
-      VALUE "FileDescription",  "juicysfplugin\0"
+      VALUE "FileDescription",  "juicysf_nointerp\0"
       VALUE "FileVersion",  "1.0.0\0"
-      VALUE "ProductName",  "juicysfplugin\0"
+      VALUE "ProductName",  "juicysf_nointerp\0"
       VALUE "ProductVersion",  "1.0.0\0"
     END
   END

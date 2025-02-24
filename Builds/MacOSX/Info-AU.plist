@@ -10,9 +10,9 @@
     <key>CFBundleIdentifier</key>
     <string>uk.co.birchlabs.juicysfplugin</string>
     <key>CFBundleName</key>
-    <string>juicysfplugin</string>
+    <string>juicysf_nointerp</string>
     <key>CFBundleDisplayName</key>
-    <string>juicysfplugin</string>
+    <string>juicysf_nointerp</string>
     <key>CFBundlePackageType</key>
     <string>BNDL</string>
     <key>CFBundleSignature</key>
@@ -29,11 +29,11 @@
     <array>
       <dict>
         <key>name</key>
-        <string>birchlabs: Juicy SF</string>
+        <string>birchlabs: Juicy SF (No Interpolation)</string>
         <key>description</key>
         <string>Audio plugin to play soundfonts</string>
         <key>factoryFunction</key>
-        <string>juicysfpluginAUFactory</string>
+        <string>juicysf_nointerpAUFactory</string>
         <key>manufacturer</key>
         <string>Blbs</string>
         <key>type</key>

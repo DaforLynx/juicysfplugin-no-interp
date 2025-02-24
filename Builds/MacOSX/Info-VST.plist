@@ -10,9 +10,9 @@
     <key>CFBundleIdentifier</key>
     <string>uk.co.birchlabs.juicysfplugin</string>
     <key>CFBundleName</key>
-    <string>juicysfplugin</string>
+    <string>juicysf_nointerp</string>
     <key>CFBundleDisplayName</key>
-    <string>juicysfplugin</string>
+    <string>juicysf_nointerp</string>
     <key>CFBundlePackageType</key>
     <string>BNDL</string>
     <key>CFBundleSignature</key>
