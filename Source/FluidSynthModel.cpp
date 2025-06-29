@@ -46,7 +46,7 @@ FluidSynthModel::FluidSynthModel(
 : valueTreeState{valueTreeState}
 , settings{nullptr, nullptr}
 , synth{nullptr, nullptr}
-, currentSampleRate{44100}
+, currentSampleRate{48000}
 , sfont_id{-1}
 , channel{0}
 {
@@ -74,6 +74,9 @@ void FluidSynthModel::initialise() {
     fluid_audio_driver_register(DRV);
     
     settings = { new_fluid_settings(), delete_fluid_settings };
+    // update the sample-rate
+    fluid_settings_setnum(settings.get(), "synth.sample-rate", currentSampleRate);
+
     
     // https://sourceforge.net/p/fluidsynth/wiki/FluidSettings/
 #if JUCE_DEBUG
@@ -81,11 +84,11 @@ void FluidSynthModel::initialise() {
 #endif
 
     synth = { new_fluid_synth(settings.get()), delete_fluid_synth };
-    fluid_synth_set_sample_rate(synth.get(), currentSampleRate);
+    // fluid_synth_set_sample_rate(synth.get(), currentSampleRate);
     fluid_synth_set_interp_method(synth.get(), -1, FLUID_INTERP_NONE);
 
     // I can't hear a damned thing
-    fluid_synth_set_gain(synth.get(), 2.0);
+    fluid_synth_set_gain(synth.get(), 1.0);
     
     // note: fluid_chan.c#fluid_channel_init_ctrl()
     // > Just like panning, a value of 64 indicates no change for sound ctrls
@@ -336,7 +339,7 @@ void FluidSynthModel::setSampleRate(float sampleRate) {
         // don't worry; we'll do this in initialise phase regardless
         return;
     }
-    fluid_synth_set_sample_rate(synth.get(), sampleRate);
+    // fluid_synth_set_sample_rate(synth.get(), sampleRate);
 }
 
 void FluidSynthModel::processBlock(AudioBuffer<float>& buffer, MidiBuffer& midiMessages) {
